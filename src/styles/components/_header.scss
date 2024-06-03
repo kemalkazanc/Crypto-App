@@ -21,7 +21,7 @@ header {
       background: rgba(20, 20, 20, 0.85);
       padding: 10px;
       border-radius: 14px;
-      box-shadow: $shadow;
+      // box-shadow: $shadow;
       display: grid;
       align-items: center;
       height: 132px;
@@ -157,7 +157,7 @@ header {
   .global-chart {
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: $shadow;
+    // box-shadow: $shadow;
 
     @media screen and (max-width: 1150px) {
       display: none;

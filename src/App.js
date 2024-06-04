@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeaderInfos from "./components/HeaderInfos.jsx";
 import GlobalChart from "./components/GlobalChart.jsx";
+import Table from "./components/Table.jsx";
 import axios from "axios";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
     <div>
       <HeaderInfos />
       <GlobalChart coinsData={coinsData} />
+      <Table />
     </div>
   );
 };

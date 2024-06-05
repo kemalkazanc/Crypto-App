@@ -16,6 +16,11 @@ const Table = ({ coinsData }) => {
     "1y",
     "ATH",
   ];
+
+  const handleRadioChange = (el) => {
+    setOrderBy(orderBy === el ? el + "reverse" : el);
+  };
+
   return (
     <div className="table-container">
       <div className="table-header">
@@ -36,13 +41,28 @@ const Table = ({ coinsData }) => {
             onChange={(e) => setRangeNumber(e.target.value)}
           />
         </div>
-        {tableHeader.map((el) => (
-          <li key={el}>
-            <input type="radio" name="header-el" id={el} defaultChecked={}
-            {el === orderBy || el === orderBy + "reverse" ? true : false}
-            />
-          </li>
-        ))}
+        {/* <ul>
+          {tableHeader.map((el) => (
+            <li key={el}>
+              <input
+                type="radio"
+                name="header-el"
+                id={el}
+                defaultChecked={
+                  el === orderBy || el === orderBy + "reverse" ? true : false
+                }
+                onChange={() =>
+                  if (orderBy === el) {
+                    setOrderBy(el, "reverse")
+                  } else {
+                    setOrderBy(el);
+                  }
+                }
+              />
+              <label htmlFor={el}>{el}</label>
+            </li>
+          ))}
+        </ul>*/}
       </div>
     </div>
   );

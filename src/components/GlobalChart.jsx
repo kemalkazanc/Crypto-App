@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Tooltip, Treemap } from "recharts";
+import { Treemap, Tooltip } from "recharts";
 import colors from "../styles/_settings.scss";
 
 const GlobalChart = ({ coinsData }) => {
@@ -41,7 +41,7 @@ const GlobalChart = ({ coinsData }) => {
 
     if (coinsData.length > 0) {
       for (let i = 0; i < 45; i++) {
-        if (excludeCoin(coinsData[i].symbole)) {
+        if (excludeCoin(coinsData[i].symbol)) {
           chartData.push({
             name:
               coinsData[i].symbol.toUpperCase() +
@@ -57,7 +57,7 @@ const GlobalChart = ({ coinsData }) => {
     setDataArray(chartData);
   }, [coinsData]);
 
-  const TreemapToolTip = ({ active, payload }) => {
+  const TreemapTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -65,7 +65,7 @@ const GlobalChart = ({ coinsData }) => {
         </div>
       );
     }
-    return null; // Ajoutez un retour null si non actif
+    return null;
   };
 
   return (
@@ -75,11 +75,11 @@ const GlobalChart = ({ coinsData }) => {
         height={181}
         data={dataArray}
         dataKey="size"
-        stroke="rgb(51,51,51)" // Correction de l'erreur typographique
+        stroke="rgb(51, 51, 51)"
         fill="black"
         aspectRatio="1"
       >
-        <Tooltip content={<TreemapToolTip />} />
+        <Tooltip content={<TreemapTooltip />} />
       </Treemap>
     </div>
   );

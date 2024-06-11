@@ -6,16 +6,14 @@ const TableFilters = () => {
       <div className="table-filters-container">
         <div className="stable-checkbox-container">
           <input type="checkbox" id="stableCoin" defaultChecked={true} />
-          <label htmlFor="" id="stableCoin">
-            Avec stable coin
-          </label>
+          <label htmlFor="stableCoin">Avec stable coin</label>
         </div>
         <div className="no-list-btn">
-          <p>Aucune liste : </p>
+          <p>Aucune liste</p>
         </div>
         <div className="fav-list">
           <p>Liste des favoris</p>
-          <img src="/assets/star-full.svg" alt="star icon" />
+          <img src="./assets/star-full.svg" alt="icon-star" />
         </div>
       </div>
     </div>

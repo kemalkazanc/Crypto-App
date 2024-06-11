@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import colors from "../styles/_settings.scss";
 
 const PercentChange = ({ percent }) => {
@@ -14,7 +14,7 @@ const PercentChange = ({ percent }) => {
     } else {
       setColor(colors.white1);
     }
-  }, [percent]);
+  }, []);
 
   return (
     <p className="percent-change-container" style={{ color }}>

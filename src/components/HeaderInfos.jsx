@@ -22,7 +22,7 @@ const HeaderInfos = () => {
       <ul className="title">
         <li>
           <h1>
-            <img src="./assets/logo.png" alt="" /> Watch Tower
+            <img src="./assets/logo.png" alt="" /> Watch Crypto
           </h1>
         </li>
         <li>
